@@ -2,9 +2,9 @@ package filestorage.domain.search;
 
 public class FindById implements Find {
     private final String key;
-    private final int value;
+    private final long value;
 
-    public FindById(String key, int value) {
+    public FindById(String key, long value) {
         this.key = key;
         this.value = value;
     }
@@ -13,7 +13,7 @@ public class FindById implements Find {
         return key;
     }
 
-    public int getValue() {
+    public long getValue() {
         return value;
     }
 }

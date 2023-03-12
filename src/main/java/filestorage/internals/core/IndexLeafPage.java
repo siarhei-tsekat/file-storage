@@ -25,7 +25,7 @@ public class IndexLeafPage implements Page {
         return 0;
     }
 
-    public Index getIndex(int documentIndex) {
+    public Index getIndex(long documentIndex) {
         for (Index index : indices) {
             if (index.index == documentIndex) {
                 return index;

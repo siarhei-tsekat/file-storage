@@ -2,7 +2,7 @@ package filestorage.domain.search;
 
 public interface Find {
 
-    static FindById byId(int id) {
+    static FindById byId(long id) {
         return new FindById("id", id);
     }
 }

@@ -73,7 +73,7 @@ public class StoreCollection {
         if (find instanceof FindById) {
             FindById findById = (FindById) find;
             String key = findById.getKey();
-            int idValue = findById.getValue();
+            long idValue = findById.getValue();
             IndexLeafPage.Index index = indexStore.findIndexPage(idValue);
             int dataPageId = index.getDataPageId();
             int dataAllocationMapId = index.getDataAllocationMapIndex();

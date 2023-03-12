@@ -40,7 +40,7 @@ public class IndexStore {
         lastLeafPage.addIndex(documentIndex, allocationMapIndex, pageId, offset);
     }
 
-    public IndexLeafPage.Index findIndexPage(int documentIndex) {
+    public IndexLeafPage.Index findIndexPage(long documentIndex) {
         return leafPages.get(new IndexKey(-1, documentIndex)).getIndex(documentIndex);
     }
 }

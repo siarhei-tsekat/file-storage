@@ -1,4 +1,4 @@
-package demo;
+package filestorage;
 
 import filestorage.domain.Store;
 import filestorage.domain.StoreCollection;

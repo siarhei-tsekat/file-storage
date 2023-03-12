@@ -21,6 +21,12 @@ import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+//todo:tsekot add request get for slave node -> using retryexecutor
+//todo:tsekot single-leader, multi-leader, or leaderless replication?
+//todo:tsekot synchronous or asynchronous replication, and how to handle failed replicas?
+//todo:tsekot eventual consistency, read-your-writes and mono‐tonic reads guarantees
+//todo:tsekot all writes in the same order as they were processed on the leader
+
 public class Store implements Closeable {
     private final Path storeMetaInfoFilePath;
     private final Path dataFilePath;
@@ -150,19 +156,19 @@ public class Store implements Closeable {
     }
 
     private Path getStoreMetaInfoFilePath(String storeName) {
-        return Path.of(String.format("D:\\tmp\\%s_store_meta.txt", storeName));
+        return Path.of(String.format("F:\\tmp\\%s_store_meta.txt", storeName));
     }
 
     private Path getDataFilePath(String storeName) {
-        return Path.of(String.format("D:\\tmp\\%s_store_data.txt", storeName));
+        return Path.of(String.format("F:\\tmp\\%s_store_data.txt", storeName));
     }
 
     private Path getMappingFilePath(String storeName) {
-        return Path.of(String.format("D:\\tmp\\%s_store_mapping.txt", storeName));
+        return Path.of(String.format("F:\\tmp\\%s_store_mapping.txt", storeName));
     }
 
     private Path getIndexFilePath(String storeName) {
-        return Path.of(String.format("D:\\tmp\\%s_store_index.txt", storeName));
+        return Path.of(String.format("F:\\tmp\\%s_store_index.txt", storeName));
     }
 }
 
